@@ -35,14 +35,6 @@
     padding: 0 20px;
 }
 
-.breadcrumb li::before {
-    content: "/";
-    opacity: .5;
-}
-
-.breadcrumb li:first-child::before {
-    content: "";
-}
 
 .current-page {
     font-weight: 700;
