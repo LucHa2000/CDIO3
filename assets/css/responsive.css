@@ -107,7 +107,7 @@ input[type="checkbox"]:checked ~ .nav-overlay{
     .header{
         display: none;
     }
-    .container-header{
+    #navbar1{
         display: none;
     }
    .container-title p{

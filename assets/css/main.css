@@ -69,14 +69,47 @@
     color:var(--main-color);
 }
 .container-header{
-position:fixed;
-top:90px;
-justify-content: space-around;
-z-index: 10;
-display:flex;
-width: 1230px;
-transform:translate(-10%, -50%);
 
+
+}
+#navbar1{
+    
+    position:fixed;
+    
+    justify-content: center;
+    z-index: 10;
+    display:flex;
+    right:0;
+    left:0;
+    width:100%;
+    transform:translateY(20px);
+
+    
+    margin: 0 auto;
+}
+
+.scroll {
+    
+    align-items: center;
+    top:-28px;
+    height:100px;
+    animation:scale-up-top 0.2s;
+    padding-top:20px;
+    position:absolute;
+   background-color:rgb(85, 85, 85);
+}
+@keyframes scale-up-top{0%{transform:scale(.5);transform-origin:50% 0}100%{transform:scale(1);transform-origin:50% 0}} 
+.scroll1 {
+    top:30px;
+    align-items: center;
+    margin-bottom:200px;
+    height:100px;
+    width: 1230px;
+    
+   
+}
+.cart{
+ transform: translateY(-10px);
 }
 .container-header-list{
     display:flex;
@@ -94,7 +127,7 @@ transform:translate(-10%, -50%);
     color: var(--main-color);
   }
 .cart  a p{
-    padding:0 10px;
+    padding:4px 10px;
     color:#CCCCC6;
     font-weight: 600;
     font-size:14px;
@@ -188,17 +221,46 @@ transform:translate(-10%, -50%);
 
 /* from search */
 /* Style the search field */
-form.example input[type=text] {
-    padding: 8px;
-    font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 80%;
-    outline:none;
-    border-radius: 100px;
-    border-right:none;
-    background-color: transparent;
+
+.search-form {
+    display: inline-block;
+    margin: 0 auto;
   }
+  
+  .pseudo-search {
+    display: inline;
+    border: 2px solid #ccc;
+    border-radius: 100px;
+    padding: 10px 15px;
+    transition: background-color 0.5 ease-in-out;
+  }
+  .pseudo-search  input {
+      border: 0;
+      background-color: transparent;
+      width: 200px;
+      color: #fff;
+      font-size:16px;
+  }
+  .pseudo-search button{
+      color:#fff;
+      font-size:14px;
+  }
+  .pseudo-search  input:focus {
+      
+        outline: none;
+      }
+    
+    
+    button, i {
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+    
+    select {
+      border: none;
+    }
+  
   
   /* Style the submit button */
   form.example input{

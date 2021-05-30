@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/slide.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">   
+
+
 </head>
 <body>
     <div class="app">
@@ -80,7 +83,7 @@
             
         </div>
      </div>
-      <header class="header" >               
+      <header style="z-index: 1000000;" class="header" >               
           <div class="grid wide">
               <div class="row row-header">              
                       <div class="header-item-left">
@@ -187,7 +190,17 @@
                        
   
                                <!-- end nav__mobile -->
-                          <div class="container-header " id="change">
+                          <nav class="container-header " id="navbar1">
+                              <script>
+                                  window.onscroll = () => {
+                                      const nav = document.querySelector('#navbar1');
+                                      if(this.scrollY <= 10) nav.className = 'scroll1';
+                                      
+                                      else
+                                      
+                                      nav.className = 'scroll';
+                                    };
+                              </script>
                              <div class="container-header-list container-header__left" >
                               
                                  <a style=" color: var(--main-color);"  href="" class="header-list__item header__left__item">TRANG CHỦ</a>
@@ -212,7 +225,6 @@
   
                                  <a href="./lien-he.htm" class="header-list__item header__left__item">LIÊN HỆ</a>
                              </div>
-     
                              <div class="container-header-list container-header__mid">
                                  <div class="icon">
                                      <img style ="width:200px; height:52px ; " src="./assets/img/logo-footer.png" alt="">
@@ -220,10 +232,14 @@
                              </div>
                              <div class="container-header-list container-header__right">
                                      
-                                          <form class="example" action="action_page.php">
-                                             <input type="text" placeholder="Search.." name="search">
-                                            <button type="submit"><i class="fa fa-search"></i></button>
-                                         </form>
+                                <form class="search-form">
+
+                                    <div class="pseudo-search">
+                                      <input type="text" placeholder="Search..." autofocus required>                                     
+                                      <button class="fa fa-search" type="submit"></button>
+                                    </div>
+                                  
+                                  </form>
                                         <div class="cart">
                                             <a href="">
                                               <p>GIỎ HÀNG</p>
@@ -238,10 +254,7 @@
                                           
                                       </div>
                              </div>
-  
-  
-  
-                       </div>
+                       </nav>
   
                        <div class="container-title">
                          
