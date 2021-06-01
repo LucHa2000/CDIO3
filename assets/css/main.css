@@ -186,20 +186,24 @@
 
 
 .shop-extend:hover .dropdown-nav {
-		opacity: 1;
+        display:block;
+        opacity: 1;
 		transform: translateY(0);
 		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+ 
+        
 	}
 
-
+    @-webkit-keyframes scale-in-top{0%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:50% 0;transform-origin:50% 0;opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:50% 0;transform-origin:50% 0;opacity:1}}@keyframes scale-in-top{0%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:50% 0;transform-origin:50% 0;opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:50% 0;transform-origin:50% 0;opacity:1}}
 .dropdown-nav {
-	opacity: 0;
-	transition: transform .3s cubic-bezier(0.88,-0.72, 0, 1), opacity .3s ease-in-out;
+	display:none;
+    opacity:0;
+	transition: transform .6s cubic-bezier(0.88,-0.72, 0, 1), opacity .3s ease-in-out;
 	transform: translateY(-4rem);
 	list-style: none;
 	margin: 0;
 	padding: 0;
-  
+    animation:scale-in-top 0.2s;
 	position: absolute;
 	
 	background:white;
@@ -208,6 +212,11 @@
     font-size: 1.2rem;
     border-radius: 2px;
 	
+}
+.user-login__item{
+   
+    width: 160px;
+   
 }
 .dropdown-nav li a {
     color:#333;
